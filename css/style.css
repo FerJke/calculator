@@ -187,7 +187,6 @@ ol, ul {
 }
 
 .calculator__year button {
-  display: block;
   position: absolute;
   z-index: 2;
   right: -1px;

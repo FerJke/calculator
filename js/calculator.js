@@ -9,9 +9,12 @@ var calculator = (function(){
 
   // Get percent
   function getPercent(radio) {
-    radio.forEach(function(item){
-      if(item.checked) percent = parseInt(item.value);
-    });
+    // radio.forEach(function(item){
+    //   if(item.checked) percent = parseInt(item.value);
+    // });
+    for(var i = 0; i < radio.length; i++){
+      if(radio[i].checked) percent = parseInt(item.value);
+    }
 
     switch (percent) {
     case 27:

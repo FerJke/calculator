@@ -49,9 +49,14 @@ window.onload = (function(){
 
   installmentTerm.init(document.querySelector(".calculator__year"));
   var termButton = document.querySelectorAll(".calculator__year button");
-  termButton.forEach(function(item, i, arr){
-    item.addEventListener("click", installmentTerm.click);
-  });
+  // termButton.forEach(function(item, i, arr){
+  //   item.addEventListener("click", installmentTerm.click);
+  // });
+  (function loop(arg){
+    for(var i = 0; i < arg.length; i++){
+      arg[i].addEventListener("click", installmentTerm.click);
+    }
+  })(termButton);
 
   // Add event on input range and number input
   var priceHouse = new ChangePrice(document.querySelector("#houseCost"), document.querySelector("#houseRange"));
