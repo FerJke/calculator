@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <section class="content-block">
+      <h1 class="title">Калькулятор</h1>
+      <p class="title-descr">*Расчет рассрочки для участка и построки дома из сруба</p>
+      <div class="calculator">
+        <!-- Часть вводимых значений -->
+        <div class="calculator__half">
+          <p class="calculator__descr">Стоимость дома</p>
+          <input type="number" id="houseCost" name="houseCost" min="10000" max="500000" step="1" value="50000">
+          <input type="range" id="houseRange" name="houseRange" min="10000" max="500000" step="1" value="50000">
+        </div>
+        <div class="calculator__half">
+          <p class="calculator__descr">Стоимость участка</p>
+          <input type="number" id="placeCost" name="placeCost" min="10000" max="500000" step="1" value="50000">
+          <input type="range" id="placeRange" name="placeRange" min="10000" max="500000" step="1" value="50000">
+        </div>
+        <div class="calculator__half">
+          <p class="calculator__descr">Первоночальный взнос</p>
+          <input id="persent27" type="radio" name="percent" value="27" checked>
+          <label class="calculator__label" for="persent27">27%</label>
+          <input id="persent37" type="radio" name="percent" value="37">
+          <label class="calculator__label" for="persent37">37%</label>
+          <input id="persent52" type="radio" name="percent" value="52">
+          <label class="calculator__label" for="persent52">52%</label>
+        </div>
+        <div class="calculator__half">
+          <p class="calculator__descr">Срок рассрочки(лет)</p>
+          <div class="calculator__year">
+            <p>1</p>
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+          </div>
+        </div>
+        <div class="calculator__full">
+          <button id="calculate">Рассчитать</button>
+        </div>
+        <!-- Часть результатов -->
+        <div class="calculator__half">
+          <p class="calculator__descr">Сумма первоночального взноса</p>
+          <p class="calculator__result" id="outFirstPay">-</p>
+        </div>
+        <div class="calculator__half">
+          <p class="calculator__descr">Процент ставки</p>
+          <p class="calculator__result" id="outPercent">-</p>
+        </div>
+        <div class="calculator__half">
+          <p class="calculator__descr">Сумма переплаты</p>
+          <p class="calculator__result" id="outOver">-</p>
+        </div>
+        <div class="calculator__half">
+          <p class="calculator__descr">Общая сумма</p>
+          <p class="calculator__result" id="outAll">-</p>
+        </div>
+        <div class="calculator__half">
+          <p class="calculator__descr">Ежемесячный платеж</p>
+          <p class="calculator__result" id="outEvery">-</p>
+        </div>
+      </div>
+    </section>
+  </div><!-- /. end wrapper -->
+
+  <!-- Scripts -->
+  <script src="js/calculator.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
