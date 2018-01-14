@@ -13,7 +13,7 @@ var calculator = (function(){
     //   if(item.checked) percent = parseInt(item.value);
     // });
     for(var i = 0; i < radio.length; i++){
-      if(radio[i].checked) percent = parseInt(item.value);
+      if(radio[i].checked) percent = parseInt(radio[i].value, 10);
     }
 
     switch (percent) {
